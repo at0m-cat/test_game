@@ -15,9 +15,11 @@ GenerateNumber()
 while True:
     number = input('Введите четырехзначное число: ')
     print('Вы ввели число {}'.format(number))
-    print('Проверяем количество быков и коров ...')
-    print(GetNumber())
-    SetNumber(number)
+    if CheckNumber(number) is True:
+        print('Проверяем количество быков и коров ...')
+        SetNumber(number)
+        print('ЧИСЛО ОТ ИИ ', GetNumber())
+        continue
 
     # InputNum(number)
     # if CheckNumber(number) is False:
@@ -25,4 +27,3 @@ while True:
     #     continue
     #
     #
-
