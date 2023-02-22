@@ -18,7 +18,7 @@ while True:
         print('Проверяем количество быков и коров ...')
         SetNumber(number)
         print(mastermind_engine._animals)
-        print('ЧИСЛО ОТ ИИ ', GetNumber())
+        # print('ЧИСЛО ОТ ИИ ', GetNumber())
         if mastermind_engine.BULL == 4:
             print('МОЛОДЕЦ, МАЛОЙ! Победил за {} ходов'
                   .format(mastermind_engine._counter))
