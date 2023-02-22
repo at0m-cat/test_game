@@ -49,7 +49,6 @@ def SetNumber(supposed_number):
                 COW = COW - BULL
             _animals['bulls'] = BULL
             _animals['cows'] = COW
-            # print(_animals)
 
 
 def CheckNumber(supposed_number: int):
