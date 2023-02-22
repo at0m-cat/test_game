@@ -3,7 +3,8 @@ from random import randint
 
 COW, BULL = None, None,
 _number = None
-_animals = {}
+_animals = None
+_counter = 0
 
 
 def GetNumber():
@@ -24,12 +25,14 @@ def GenerateNumber():
 
 def SetNumber(supposed_number):
     global COW, BULL, _animals
+    global _counter
     _animals, COW, BULL = {}, 0, 0
     CheckNumber(supposed_number)
     if supposed_number:
         if CheckNumber(supposed_number) is False:
             return 0
         if CheckNumber(supposed_number) is True:
+            _counter += 1
             bunch_number_user, bunch_number_generate = set(), set()
             user_num, server_num = [], []
             for i, j in enumerate(str(supposed_number)):
@@ -46,7 +49,7 @@ def SetNumber(supposed_number):
                 COW = COW - BULL
             _animals['bulls'] = BULL
             _animals['cows'] = COW
-            print(_animals)
+            # print(_animals)
 
 
 def CheckNumber(supposed_number: int):
@@ -54,6 +57,3 @@ def CheckNumber(supposed_number: int):
         if len(str(supposed_number)) == 4:
             return True
     return False
-
-# Чтобы не повторялись числа при вводе, можно использовать систему множеств. После ввода
-# пользователем числа, его длина должна быть 4, в противном случае ввести снова число.

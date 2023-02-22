@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-
-
+import mastermind_engine
 # В текущем модуле (lesson_006/mastermind.py) реализовать логику работы с пользователем:
 #   модуль движка загадывает число
 #   в цикле, пока число не отгадано
@@ -18,12 +17,20 @@ while True:
     if CheckNumber(number) is True:
         print('Проверяем количество быков и коров ...')
         SetNumber(number)
+        print(mastermind_engine._animals)
         print('ЧИСЛО ОТ ИИ ', GetNumber())
-        continue
 
-    # InputNum(number)
-    # if CheckNumber(number) is False:
-    #     print('asdsaaa: ___')
-    #     continue
-    #
-    #
+        if mastermind_engine.BULL == 4:
+            print('МОЛОДЕЦ, МАЛОЙ. Победил за {} ходов'
+                  .format(mastermind_engine._counter))
+            break
+
+    # print('ЧИСЛО ОТ ИИ ', GetNumber())
+    continue
+
+# InputNum(number)
+# if CheckNumber(number) is False:
+#     print('asdsaaa: ___')
+#     continue
+#
+#
