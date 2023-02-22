@@ -16,11 +16,11 @@ while True:
     number = input('Введите четырехзначное число: ')
     print('Вы ввели число {}'.format(number))
     print('Проверяем количество быков и коров ...')
-    print(GetNumber())
+    # print(GetNumber())
     CheckNumber(number)
     if CheckNumber(number) is False:
         print('asdsaaa: ___')
-        break
+        continue
 
 
 

@@ -21,14 +21,20 @@ def GenerateNumber():
 def GetNumber():
     return int(_number)
 
-def fsaf():
-    pass
 
 def CheckNumber(supposed_number):
     global COW, BULL, _animals
     _animals, COW, BULL = {}, 0, 0
-    if len(str(supposed_number)) != 4 and type(supposed_number) != int:
+    while CheckNumber is False:
+        return 0
+
+    if len(str(supposed_number)) != 4:
+        print('ERROR !!!')
         return False
+
+# Чтобы не повторялись числа при вводе, можно использовать систему множеств. После ввода
+# пользователем числа, его длина должна быть 4, в противном случае ввести снова число.
+
     while supposed_number:
         bunch_number_user, bunch_number_generate = set(), set()
         user_num, server_num = [], []
@@ -47,6 +53,5 @@ def CheckNumber(supposed_number):
         _animals['bulls'] = BULL
         _animals['cows'] = COW
         print(_animals)
-        break
-    return True
+        supposed_number = False
 
