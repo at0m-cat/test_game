@@ -9,18 +9,20 @@
 #       результат быков/коров выводится на консоль
 #  когда игрок угадал таки число - показать количество ходов и вопрос "Хотите еще партию?"
 
-from mastermind_engine import GenerateNumber, CheckNumber, GetNumber
+from mastermind_engine import GenerateNumber, CheckNumber, GetNumber, SetNumber
 
 GenerateNumber()
 while True:
     number = input('Введите четырехзначное число: ')
     print('Вы ввели число {}'.format(number))
     print('Проверяем количество быков и коров ...')
-    # print(GetNumber())
-    CheckNumber(number)
-    if CheckNumber(number) is False:
-        print('asdsaaa: ___')
-        continue
+    print(GetNumber())
+    SetNumber(number)
 
-
+    # InputNum(number)
+    # if CheckNumber(number) is False:
+    #     print('asdsaaa: ___')
+    #     continue
+    #
+    #
 
